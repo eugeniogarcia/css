@@ -9,19 +9,19 @@ html {
     margin: 1rem;
     border-radius: 1rem;
 
-    position: relative;
+    position: relative; /*Para poder poner el contenido before de forma absoluta*/
 }
 
-.box::before {
-    content: '';
+.box::before { /* contenido que se inserta antes de los elementos de la clase box*/
+    content: '';/*blanco*/
     width: 1rem;
     height: 1rem;
     background-color: #e0e0e0;
     overflow: hidden;
 
-    position: absolute;
-    right: -0.5rem;
+    position: absolute;/*nos posicionamos de forma absoluta con respecto del primer padre posicionado no estatic, que en este caso es el propio .box*/
+    right: -0.5rem; /*el borde derecho lo colocamos -0.5rem del borde derecho del .box*/
     top: 50%;
-    transform: rotate(45deg);
+    transform: rotate(45deg); /*giramos 45*/
     margin-top: -0.5rem;
 }

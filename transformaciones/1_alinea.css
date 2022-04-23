@@ -12,7 +12,7 @@ html {
 
 .child {
     font-size: 1.2rem;
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
+    position: relative; /*posicion relativa*/
+    top: 50%;/*desplazamos el top un 50% desde arriba. La primera linea estará en el medio*/
+    transform: translateY(-50%);/*trasladamos el contenido un 50% hacia arriba*/
 }

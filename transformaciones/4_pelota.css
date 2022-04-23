@@ -12,13 +12,13 @@ html {
     background: linear-gradient(to bottom,
         #cb60b3 0%, #c146a1 50%, #a80077 51%, #db36a4 100%);
 
-    animation: salta 1.5s ease-out infinite alternate;
+    animation: salta 1.5s ease-out infinite alternate; /* la animacion se llama salta, dura 1.5s, la interpolación es ease-out, se ejecuta infinitas veces, y se va alternando el from-to*/
 }
 
 @keyframes salta {
     from {
-        transform: translateY(0px) rotate(0deg) scale(1, 1);
-        opacity: 1;
+        transform: translateY(0px) rotate(0deg) scale(1, 1); /*traslado vertical, con giro, y escalado*/
+        opacity: 1; /*cambiamos la transparencia*/
     }
 
     to {
