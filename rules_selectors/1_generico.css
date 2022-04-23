@@ -1,0 +1,30 @@
+*:focus { /*aplica a todos los elementos*/
+  outline: 2px dotted red;
+}
+
+p::first-letter {
+  color: red;
+  font-size: 3rem;
+  line-height: 0;
+  display: block;
+  float: left;
+  margin-top: .125rem;
+  margin-right: .5rem;
+}
+
+p::first-line {
+  color: red;
+}
+
+input[type=text]::placeholder {
+  font-family: cursive;
+}
+
+::selection {
+  background-color: cornflowerblue;
+  color: white;
+}
+
+::backdrop {
+  background: cornflowerblue;
+}
