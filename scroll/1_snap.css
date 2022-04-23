@@ -1,0 +1,23 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+
+    padding: 0;
+    margin: 0;
+}
+
+.slideshow {
+    scroll-snap-type: x mandatory; /* Indicates scroll axis and behavior */
+    overflow-y: auto; /* Should be either `scroll` or `auto` */
+    display: flex;
+    height: 100vh;
+}
+
+.slideshow img {
+    width: 100vw;
+    height: 100vh;
+    scroll-snap-align: center;
+}
