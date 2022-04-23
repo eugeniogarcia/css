@@ -1,0 +1,43 @@
+html {
+    font-size: 16px;
+}
+
+.container {
+    margin: 10px auto;
+}
+
+.photo {
+    width: 22vw;
+    height: 20vw;
+    min-width: 130px;
+    min-height: 100px;
+    float: left;
+    margin: 0 20px;
+
+    position: relative; /*para que su hijo pueda tener un posicionamiento absoluto*/
+    transform-style: preserve-3d;
+    transition: transform 1s ease-in-out;
+}
+
+.photo img {
+    object-fit: cover;
+}
+
+.side {
+    width: 100%;
+    height: 100%;
+
+    position: absolute; /*Este elemento, el figcaption y la img, no ocupan espacio, y se posiciona con respecto al padre, photo*/
+    backface-visibility: hidden; /*si se gira, no mostramos nada (la alternativa es mostrar el contenido como si estuvieramos al otro lado del cristal*/
+}
+
+.back {
+    transform: rotateY(180deg); /*Inicialmente rotamo el figcaption. Como hemos puesto backface-visibility: hidden, el figcaption se oculta*/
+    text-align: center;
+
+    background-color: #e0e0e0;
+}
+
+.photo:hover {
+    transform: rotateY(180deg);/*Cuando se pasa el raton sobre la imagen se gira el elemento photo, lo que hace que se giren tanto el img como el figcaption. Uno se ocultara y el otro se mostrará por backface-visibility: hidden*/
+}
