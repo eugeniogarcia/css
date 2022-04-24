@@ -1,6 +1,10 @@
+:root{
+--valor:10 /*declara una variable*/
+}
+
 ul {
   /*counter-reset: contador;*/
-  counter-set: contador 10; /*setea el contador*/
+  counter-set: contador var(--valor); /*setea el contador; demostramos como usar una variable custom*/
 }
 
 li:before {
