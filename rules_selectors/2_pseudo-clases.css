@@ -1,0 +1,81 @@
+/*pseudo-clases*/
+
+table {
+  border-collapse: collapse;
+  margin-bottom: 1rem; /*espacio de un caracter con el siguiente elemento*/
+
+  width: 100%; /*ocupa toda la pantalla*/
+}
+
+tr {
+  border-top: solid 1px lightgrey; /*cada fila de la tabla tendra un borde por arriba y por abajo*/
+  border-bottom: solid 1px lightgrey;
+}
+
+th, td {
+  padding: .5rem 1rem; /*cada celda tendra un espacio alreadedor del texto*/
+  text-align: left; /*alineamos a la izquierda las celdas*/
+}
+
+form {
+  margin-top: 2rem; /*pone un margen por arriba en el formulario*/
+}
+
+label {
+  margin-bottom: .5rem;
+}
+
+input {
+  border: solid 1px lightblue;
+  padding: .5rem 1rem;
+  width: 100%; /*ensancha cada iput para que ocupe todo el ancho*/
+}
+
+button {
+  padding: .5rem 1.5rem;
+  border: solid 1px lightblue;
+  border-radius: 3px;
+  background: white;
+  margin-top: .5rem;
+}
+
+/*pseudo clases */
+form>*:not(button) { /*todos los elementos hijos de form, excepto el button*/
+  border-radius: 4px;
+  color: blue;
+  box-sizing: border-box;
+  display: block;
+}
+
+input:invalid {
+  border-left: solid 5px red; /*pone en rojo el borde izquierdo si los inputs invalidos*/
+}
+
+input:valid {
+  border-left: solid 5px green; /*pone en verde el borde izquierdo si los inputs validos*/
+}
+
+input:in-range {
+  border-top: solid 5px green;
+  /*pone en verde el superior izquierdo si los inputs validos*/
+}
+
+input:out-of-range {
+  border-top: solid 5px red;
+  /*pone en verde el borde superior si los inputs validos*/
+}
+
+input:hover,
+input:active {
+  border-color: slategray;
+}
+
+button:hover,
+button:active {
+  outline: dotted 1px blue;
+  outline-offset: 2px;
+}
+
+tbody tr:nth-last-of-type(odd) {
+  background: lightblue;
+}

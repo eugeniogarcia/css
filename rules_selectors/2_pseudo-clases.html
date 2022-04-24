@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="2_pseudo-clases.css">
+</head>
+<body>
+  <h1>Pseudo Classes</h1>
+  <table>
+    <thead>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Zip Code</th>
+    </thead>
+    <tbody>
+  <tr>
+    <td>Jane</td>
+    <td>jane@email.com</td>
+    <td>15978</td>
+  </tr>
+  <tr>
+    <td>John</td>
+    <td>john@email.com</td>
+    <td>11458</td>
+  </tr>
+  <tr>
+    <td>Alex</td>
+    <td>alex@email.com</td>
+    <td>68978</td>
+  </tr>
+  </tbody>
+  </table>
+
+  <script>
+    function mensaje(){
+      window.alert(`Name: ${formulario.id1.value}\nEmail ${formulario.id2.value}\nZip: ${formulario.id3.value}`);
+      return false;
+    }
+  </script>
+
+  <form onsubmit="return mensaje()" id="formulario">
+    <label>
+      Name:
+      <input id="id1" type="text" minlength="4" maxlength="20" required>
+    </label>
+    <label>
+      Email
+      <input id="id2" type="email" maxlength="100" required>
+    </label>
+    <label>
+      Zip Code:
+      <input id="id3" type="number" max="99999">
+    </label>
+    <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

@@ -2,6 +2,8 @@
   outline: 2px dotted red;
 }
 
+/*Pseudo-elements*/
+
 p::first-letter {
   color: red;
   font-size: 3rem;
@@ -28,3 +30,5 @@ input[type=text]::placeholder {
 ::backdrop {
   background: cornflowerblue;
 }
+
+/*pseudo-clases*/
