@@ -47,11 +47,11 @@ form>*:not(button) { /*todos los elementos hijos de form, excepto el button*/
   display: block;
 }
 
-input:invalid {
+input:invalid { /*invalido*/
   border-left: solid 5px red; /*pone en rojo el borde izquierdo si los inputs invalidos*/
 }
 
-input:valid {
+input:valid { /*valido*/
   border-left: solid 5px green; /*pone en verde el borde izquierdo si los inputs validos*/
 }
 
@@ -70,12 +70,12 @@ input:active {
   border-color: slategray;
 }
 
-button:hover,
+button:hover, /*seleccionamos cuando el boton esta activo o pasamos por encima de él el raton */
 button:active {
   outline: dotted 1px blue;
   outline-offset: 2px;
 }
 
-tbody tr:nth-last-of-type(odd) {
+tbody tr:nth-last-of-type(odd) { /*seleccionamos filas impares*/
   background: lightblue;
 }

@@ -14,11 +14,11 @@ p::first-letter {
   margin-right: .5rem;
 }
 
-p::first-line {
+p::first-line { /*elemento que hace la primera fila*/
   color: red;
 }
 
-input[type=text]::placeholder {
+input[type=text]::placeholder { /*selecciona un elemento en base al valor de un atributo y seleccionamos el elemento placeholder*/
   font-family: cursive;
 }
 
