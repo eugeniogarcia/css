@@ -1,0 +1,50 @@
+/*Podemos alterar el comportamiento de las propiedades, desde el punto de vista de la herencia, usando los atributos inherit, unset, and initial */
+
+body {
+    font-family: sans-serif;
+    padding: 10px;
+}
+
+li {
+    font-family: cursive; /*Comportamiento por defecto de esta propiedad. En este caso es una propiedad heredable*/
+}
+
+li:nth-of-type(2) {
+    font-family: unset;
+    /*Dependiendo de cada propiedad, hereda el valor, o toma el valor por defecto. En este caso heredado*/
+}
+
+li:nth-of-type(3) {
+    font-family: initial;/*Toma el valor por defecto del navegador*/
+}
+
+li:nth-of-type(4) {
+    font-family: inherit;/*Toma el valor heredado de su padre*/
+}
+
+p {
+    padding: 20px;
+    border: dashed 1px gray;
+}
+
+p::first-letter {
+    display: block;
+    float: left;
+    font-size: 3rem;
+    color: red;
+}
+
+p:nth-of-type(2) {
+    padding: unset /*Dependiendo de cada propiedad, hereda el valor, o toma el valor por defecto. En este caso por defecto*/
+}
+p:nth-of-type(3) {
+    padding: default /*Fuerza a que se tome el valor por defecto*/
+}
+
+p:nth-of-type(3) {
+    padding: initial
+}
+
+p:nth-of-type(4) {
+    padding: inherit
+}
