@@ -45,3 +45,18 @@ These keywords specify the element's outer display type, which is essentially it
   - grid-gap. This will determine how much space is between each row and/or column. For example, grid-gap: 5px 2rem would set a gap of 5 pixels between each row and a gap of 2 rems between each column.
   - justify-content. flex-start, flex-end, center, space-around, space-evenly and space-between
   - grid-auto-flow. Controla como se rellenan las celdas. _row_ o _column_ rellena por filas o por columnas. Añadiendo la opción _dense_ hace que se rellenen los gaps que puedan exitir - así especificaríamos _column-dense_, por ejemplo
+
+## Responsive design
+
+At the core of responsive design implementation is the media query. More specifically, using media queries allows you to conditionally change styles based on the viewport’s properties. The end goal being to tailor the layout for small mobile screens vs. large desktop monitors, and everything in between. To achieve this technique, breakpoints are chosen at different viewport width(s) where the styles will change.
+
+```css
+@media (min-width: 500px) { ... }
+```
+
+Where anything in between the brackets does not get applied unless the width of the viewport is greater than 500px.
+
+```css
+@media (500px <= width <= 700px) { ... }
+```
+
