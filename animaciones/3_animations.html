@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="3_animations.css">
+</head>
+<body>
+  <div class="show-hide">
+    <button onclick="toggleAnimation()" id="button">
+      muestra
+    </button>
+    <div class="animation-container" id="animationContainer">
+    </div>
+  </div>
+  <script>
+    function toggleAnimation() {
+      if (!animationContainer.classList.contains('show')){
+        showContainer()
+      }
+      else{
+        hideContainer()
+      }
+    }
+    function showContainer() {
+      button.innerHTML="oculta";
+      animationContainer.classList.add('show'); //dispara la animacion
+    }
+    function hideContainer() {
+      button.disabled = true;
+      button.innerHTML = "muestra";
+      animationContainer.addEventListener('animationend', cleanup); //lanza un callback cuando la anumacion termina
+      animationContainer.classList.replace('show', 'close'); //dispara la animacion
+    }
+    function cleanup() {
+      animationContainer.classList.remove('close'); //dispara la animacion
+      animationContainer.removeEventListener('animationend', cleanup);
+      button.disabled =false;
+    }
+  </script>
+</body>
+</html>

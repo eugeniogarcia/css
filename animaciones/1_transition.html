@@ -4,10 +4,17 @@
     <link rel="stylesheet" href="1_transition.css">
 </head>
 <body>
-
-  <a href="">
+  <a href="" id="elto">
     <span>Transitions</span>
   </a>
+
+<script>
+  function mensaje() {
+    console.log("fin de la transicion");
+  }
+
+  elto.addEventListener('transitionend', mensaje);
+</script>
 
 </body>
 </html>

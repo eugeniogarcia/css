@@ -1,0 +1,38 @@
+@keyframes rueda {
+  0% {
+    transform: translateX(-75vw) rotate(-360deg);
+  }
+
+  100% {
+    transform: translate(0) rotate(0)
+  }
+}
+
+@keyframes rueda-inv {
+  0% {
+    transform: translate(0) rotate(0)
+  }
+
+  100% {
+    transform: translateX(-75vw) rotate(-360deg);
+  }
+}
+
+.animation-container {
+  background: linear-gradient(lightgrey, grey);
+  border-radius: 50%;
+  display: none;
+  height: 100px;
+  margin: 1rem auto;
+  width: 100px;
+}
+
+.show {
+  display: block;
+  animation: rueda ll 1s cubic-bezier(0.280, 0.840, 0.420, 1); /* lanza la animacion rueda que durara un segundo, con una funcion de interpolazacion de bezier */
+  }
+  
+.close {
+    display: block;
+    animation: rueda-inv 1s cubic-bezier(0.280, 0.840, 0.420, 1); /* lanza la animacion rueda-inv que durara un segundo, con una funcion de interpolazacion de bezier */
+  }

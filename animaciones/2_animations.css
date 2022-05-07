@@ -40,13 +40,16 @@ body>div {
     border-color: gray;
     color: gray;
     border-radius: 45px;
-    transform: rotate(0) scale(1);
+    transform: rotate(0) scale(1); /*restituye todo al angulo original, y tamaño original */
   }
 }
 
 .animations {
   animation: myAnimation 500ms ease-in-out 1;
   /* nuestra animacion, dura 500ms, con una transicion ease-in-out, y con un retraso de */
+  /* animation: name duration timing-function delay iteration-count direction fill-mode;*/
+  /* La direccion puede ser: forward, backward, o toggle - forward and backward.
+    */
   background: white;
   border: solid 1px gray;
   border-radius: 45px;
