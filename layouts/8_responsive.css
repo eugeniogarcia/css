@@ -94,14 +94,13 @@ body {
 }
 
 /* Ordenador */
-@media (min-width: 500px) {
+@media (min-width: 600px) {
     body {
         grid-template-columns: 1fr; /*una columna*/
         grid-template-rows: auto auto auto; /*tres filas*/
         grid-template-areas: /* layout*/
             "cabecera"
-            "navegacion"
-            "titulo"
+            "navegacion titulo"
             "principal";
         height: auto;
         overflow: auto;
