@@ -1,0 +1,25 @@
+.container {
+    overflow: auto;
+} /* coloca automáticamente los boxes*/
+
+.container>div {
+    width: 50%;
+    float: left; /* estos elementos "flotaran" a la izquierda del resto */
+}
+
+.container p {
+    background: rgba(0, 0, 0, .16);
+    /* light grey */
+    text-align: center;
+}
+
+.container>div:last-of-type p { /*El ultimo elemento de tipo p que es hijo directo de la clase .container*/
+    /* second rectangle */
+    background: rgba(0, 0, 0, .32);
+    /* dark grey */
+}
+
+.has-padding>div {
+    outline: dashed 1px rgba(0, 0, 0, .5);
+    padding: 10px; /*Al tener el padding, el ancho supera el del viewport*/
+}

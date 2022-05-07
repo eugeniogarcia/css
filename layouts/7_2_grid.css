@@ -1,0 +1,58 @@
+html,
+body {
+    padding: 36px;
+    margin: 0;
+}
+
+header {
+    grid-area: cabecera;/* etiquetamos esta seccion*/
+    background: rgba(0, 0, 0, .1);
+    text-align: center;
+    padding: 5px;
+    grid-row: 1; /*Especificamos la posicion de estos componentes*/
+    grid-column: 1 / 5; /*Especificamos la posicion de estos componentes. Cada número indica la linea que incluye. Si tenemos una grilla con, por ejemplo tres filas, tiene cuatro líneas. Por ejemplo, nos podemos referir a la segunda fila como 2, o como 2/3. Si tenemos cuatro columnas, la cuarta columna seria 4 o 4/5*/
+}
+
+main {
+    grid-area: cuerpo; /* etiquetamos esta seccion*/
+    background: rgba(0, 0, 0, .2);
+    padding: 10px;
+    grid-row: 2;/*Especificamos la posicion de estos componentes*/
+    grid-column: 1 / 3;/*Especificamos la posicion de estos componentes*/
+}
+
+.sidebar {
+    grid-area: lateral;
+    padding: 10px;
+    background: rgba(0, 0, 0, .3);
+    float: left;
+    grid-row: 2 / 4;/*Especificamos la posicion de estos componentes*/
+    grid-column: 4;/*Especificamos la posicion de estos componentes*/
+}
+
+footer {
+    grid-area: pie; /* etiquetamos esta seccion*/
+    background: rgba(0, 0, 0, .5);
+    text-align: center;
+    color: white;
+    grid-row: 3;/*Especificamos la posicion de estos componentes*/
+    grid-column: 1 / 4;/*Especificamos la posicion de estos componentes*/
+}
+
+.container {
+    display: grid; /* es una grid*/
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 46px auto 36px;
+}
+
+header,
+footer {
+    display: flex; /* usamos flex para footer y header*/
+    align-items: center;
+    justify-content: center;
+}
+
+header h2,
+footer h2 {
+    margin: 0;
+}

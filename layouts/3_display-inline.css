@@ -1,0 +1,16 @@
+body {
+    font-size: 24px;
+    padding: 36px;
+    margin: 0;
+}
+
+a {
+    padding: 10px;
+    outline: dotted 2px grey; /*pinta un marco, un recuadro. En este caso de puntos*/
+}
+
+code {
+    margin: 10px;
+    outline: dotted 2px grey; /*pinta un marco, un recuadro. En este caso de puntos*/
+    outline-offset: 8px;
+}

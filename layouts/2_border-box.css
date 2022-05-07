@@ -1,0 +1,33 @@
+.container {
+    overflow: auto; /*The overflow property specifies what should happen if content overflows an element's box. This property specifies whether to clip content or to add scrollbars when an element's content is too big to fit in a specified area.
+    
+    Note: The overflow property only works for block elements with a specified height. */
+}
+
+.container>div {
+    width: 50%;
+    box-sizing: border-box; /* incluye el padding dentro de lo que se entiende por "caja de contenido"*/
+    float: left;
+}
+
+.container p {
+    background: rgba(0, 0, 0, .16);
+    /* light grey */
+    text-align: center;
+    margin: 0;
+}
+
+.container>div:last-of-type p { /*segundo elemento*/
+    background: rgba(0, 0, 0, .32);
+    /* dark grey */
+}
+
+.has-padding>div {
+    border: dashed 1px rgba(0, 0, 0, .5);
+    padding: 10px;
+}
+
+.has-margin>div {
+    border: dashed 1px rgba(0, 0, 0, .5);
+    margin: 10px;
+}
