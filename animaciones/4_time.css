@@ -1,0 +1,36 @@
+body {
+  box-sizing: border-box;
+  padding: 36px;
+  margin: 0;
+}
+
+body>div {
+  box-sizing: border-box;
+  margin-bottom: 3rem;
+}
+
+@keyframes jumpStart {
+  0% {
+    width: 0;
+    background-color: white;
+    border: 1px solid gray;
+  }
+
+  100% {
+    width: 90vw;
+    background-color: gray;
+      border: 1px solid gray;
+  }
+}
+    
+.jump-start {
+  animation-name: jumpStart; /* animación */
+  animation-duration: 5s; /* cuanto tiempo dura la animación */
+  animation-iteration-count: infinite; /* cuantas veces se ejecuta la animación */
+  margin-bottom: 4px;
+  animation-timing-function: steps(5, jump-start); /*a stepping function which divides the animation into equal segments across time can also be used. Two values are used to define the animation’s timing: number of steps (n) and step position 
+  
+  If jump-end had been used,
+    the container would have started at a width of 0,
+    but never reached a width of 100%. The container would only have a width of 80% */
+}
