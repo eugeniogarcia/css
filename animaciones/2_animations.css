@@ -1,0 +1,59 @@
+html {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  box-sizing: border-box;
+  padding: 36px;
+  margin: 0;
+}
+
+body>div {
+  box-sizing: border-box;
+  margin-bottom: 3rem;
+}
+
+@keyframes myAnimation {
+  0% {
+    background: gray;
+    border-color: white;
+    color: white;
+    border-radius: 0px;
+    transform: scale(0);
+  }
+
+  25% {
+    transform: rotate(5deg) scale(.25);
+  }
+
+  50% {
+    transform: rotate(-10deg) scale(.5);
+  }
+
+  75% {
+    transform: rotate(35deg) scale(.75);
+  }
+
+  100% {
+    background: white;
+    border-color: gray;
+    color: gray;
+    border-radius: 45px;
+    transform: rotate(0) scale(1);
+  }
+}
+
+.animations {
+  animation: myAnimation 500ms ease-in-out 1;
+  /* nuestra animacion, dura 500ms, con una transicion ease-in-out, y con un retraso de */
+  background: white;
+  border: solid 1px gray;
+  border-radius: 45px;
+  box-sizing: border-box;
+  color: gray;
+  font-size: 2rem;
+  padding: 2rem;
+  text-align: center;
+  width: 100%;
+}
